@@ -1,18 +1,32 @@
 {
-    "devDependencies": {
-        "eslint": "^9.5.0",
-        "htmlhint": "^1.1.4",
-        "http-server": "^14.1.1",
-        "stylelint": "^16.6.1",
-        "stylelint-config-recommended": "^14.0.0"
-    },
+    "name": "weddingtralala",
+    "version": "1.0.0",
+    "description": "Proyek undangan digital",
+    "main": "index.js",
     "scripts": {
         "lint:js": "eslint js",
         "lint:css": "stylelint css",
         "lint:html": "htmlhint **/*.html",
-        "dev:start": "http-server -p 8080"
+        "dev:start": "http-server -p 8080",
+        "build": "npm run lint:js && npm run lint:css && npm run lint:html && webpack --mode production"
     },
     "dependencies": {
-        "eslint-plugin-html": "^8.1.2"
-    }
+        "eslint-plugin-html": "^8.1.2",
+        "glob": "^11.0.0",
+        "lrucache": "^1.0.3"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.26.0",
+        "@babel/preset-env": "^7.26.0",
+        "babel-loader": "^9.2.1",
+        "eslint": "^9.5.0",
+        "htmlhint": "^1.1.4",
+        "http-server": "^14.1.1",
+        "stylelint": "^16.6.1",
+        "stylelint-config-recommended": "^14.0.0",
+        "webpack": "^5.97.1",
+        "webpack-cli": "^5.1.4"
+    },
+    "author": "Your Name",
+    "license": "MIT"
 }
